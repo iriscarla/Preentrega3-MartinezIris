@@ -1,0 +1,117 @@
+.grid-container-cuidados{
+    margin:5%;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "cuidados01  cuidados03"
+    "cuidados02  cuidados03";
+    gap: 20px;
+    justify-content: center;
+        section{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            gap: 20px;
+            border: 1px solid black;
+            width: auto;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            }
+
+
+                div{
+                    align-self: center;
+                    width: 100%;
+                    }
+
+                img{
+                    width: 100%;
+                    height: 350px;
+                    object-fit: cover;
+
+
+
+
+
+                    }
+                h4{
+                    padding: 10px;
+                    font-family: 'Ysabeau Infant',serif;
+                    align-self: center;
+                    text-align: center;
+                }
+                p{
+                 align-self: center ;
+                 text-align: justify;
+                 font-family: "Mandali", sans-serif;
+                padding-right: 15px;
+                padding-left: 15px;;
+                }
+
+
+         }
+
+
+/*Grid Areas*/
+.cuidados01{
+    grid-area: cuidados01;
+    ;
+}
+
+.cuidados02{
+    grid-area: cuidados02;
+
+}
+.cuidados03{
+    grid-area: cuidados03;
+    display: flex;
+    flex-direction: column;
+
+
+        img{
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            object-position: center;
+            }
+            p{
+                gap:20px;
+                padding: 15px;
+            }
+
+        }
+
+
+span{
+    font-weight: bold;
+    font: 17px;
+}
+
+@media (max-width: 576px) {
+    .grid-container-cuidados{
+        margin: 15px;
+        grid-template-columns:80vw;
+        grid-template-areas:
+            "cuidados01"
+            "cuidados02"
+            "cuidados03";
+
+
+    }
+        div{
+        width: 100%;
+    }
+        img {
+            max-width: 100%;
+            height: auto;
+            // width: 100% !important;
+            // height: 100%;
+            // object-fit: cover;
+            // object-position: center;
+
+
+    }
+
+}

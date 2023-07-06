@@ -1,0 +1,30 @@
+/*Tipografias:
+font-family: 'Jost', sans-serif;
+font-family: 'Mandali', sans-serif;
+font-family: 'MonteCarlo', cursive;
+font-family: 'Tajawal', sans-serif;
+font-family: 'Ysabeau Infant', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    ;
+}
+html{
+    box-sizing: border-box
+}
+@import './abstract/variables';
+@import './abstract/maps';
+@import './abstract/extend';
+@import './abstract/mixing';
+
+@import './componentes/_index' ;
+@import './componentes/_navbar' ;
+@import './componentes/_tienda';
+@import './componentes/_header';
+@import './componentes/_cuidados';
+@import './componentes/_quienes-somos';
+@import './componentes/_footer';
+@import './componentes/contacto';
+
+

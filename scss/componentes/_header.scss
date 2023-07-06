@@ -1,0 +1,38 @@
+
+
+ /*Titulo de Cada Página: Tienda, Cuidados, Quienes Somos, Contacto*/
+ .title-header{
+    color: black;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 40px;
+    margin: 50px;
+    font-size: 70px;
+}
+
+
+
+// animación
+.title-header {
+  animation-name: animacion-titulo;
+  animation-duration:1.2s;
+  animation-fill-mode:forwards; /* Para que se mantenga el estado final de la animación */
+  animation-timing-function: ease-out;
+}
+
+@keyframes animacion-titulo {
+  from {
+    transform: translateY(-100%);
+ 
+    color:#7c0321;
+  }
+  to {
+    color: rgb(8, 8, 8);
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,533 @@
+@charset "UTF-8";
+/*Tipografias:
+font-family: 'Jost', sans-serif;
+font-family: 'Mandali', sans-serif;
+font-family: 'MonteCarlo', cursive;
+font-family: 'Tajawal', sans-serif;
+font-family: 'Ysabeau Infant', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/*Lista de tamaños de tipografías*/ /*Mapas*/
+/*Colores de la página*/
+/*Titulo de Cada Página: Tienda, Cuidados, Quienes Somos, Contacto*/
+.title-header {
+  color: rgb(22, 21, 21);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: "Tajawal", sans-serif;
+  font-size: 30px;
+  margin: 30px;
+  font-size: 60px; /*60px*/
+}
+
+/*Extend Cajas de tienda*/
+.caja-principal-4, .caja-principal-3, .caja-principal-2, .caja-principal-1 {
+  border: 3px solid #EDE6E9;
+  display: flex;
+  width: 500px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*Body Index, Background*/
+#index-body {
+  background: url("../img/background05.jpg");
+  background-color: #573D33;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media (max-width: 576px) {
+  #index-body {
+    width: 100%;
+  }
+}
+
+/*Grid Index*/
+#index-main-container {
+  margin: 3%;
+  display: grid;
+  grid-auto-columns: repeat auto-fit, minmax(200px, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "index-main-title" "index-paragraph" "ir_tienda";
+  gap: 25px;
+}
+
+.index-main-title {
+  grid-area: index-main-title;
+  justify-self: center;
+  align-self: center;
+}
+@media (max-width: 576px) {
+  .index-main-title {
+    width: 90%;
+    text-align: center;
+  }
+}
+.index-main-title h1 {
+  font-size: 60px;
+  font-family: "Tajawal", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.index-paragraph {
+  grid-area: index-paragraph;
+  width: 800px;
+  justify-self: center;
+  color: black;
+}
+@media (max-width: 576px) {
+  .index-paragraph {
+    width: 90%;
+    justify-content: center;
+  }
+}
+.index-paragraph p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.ir_tienda {
+  grid-area: ir_tienda;
+  justify-self: end;
+}
+@media (max-width: 576px) {
+  .ir_tienda {
+    width: 90%;
+    justify-content: center;
+  }
+}
+.ir_tienda a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 2px 1px 1px #a35f1b;
+}
+
+/* BOTON Robado */
+button {
+  margin: 20px;
+}
+
+.custom-btn {
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+.btn-8 {
+  background-color: transparent;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn-8 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-8:before,
+.btn-8:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #7a0427;
+  transition: all 0.3s ease;
+}
+
+.btn-8:before {
+  height: 0%;
+  width: 4px;
+}
+
+.btn-8:after {
+  width: 0%;
+  height: 3px;
+}
+
+.btn-8:hover:before {
+  height: 100%;
+}
+
+.btn-8:hover:after {
+  width: 100%;
+}
+
+.btn-8:hover {
+  background: transparent;
+}
+
+.btn-8 span:hover {
+  color: #07010c;
+}
+
+.btn-8 span:before,
+.btn-8 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #7a0427;
+  transition: all 0.3s ease;
+}
+
+.btn-8 span:before {
+  width: 4px;
+  height: 0%;
+}
+
+.btn-8 span:after {
+  height: 4px;
+  width: 0%;
+}
+
+.btn-8 span:hover:before {
+  height: 100%;
+}
+
+.btn-8 span:hover:after {
+  width: 100%;
+}
+
+/*Footer Index*/
+.redes {
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .redes {
+    width: 90%;
+    justify-content: center;
+    font-size: 20px;
+  }
+}
+.redes li {
+  display: inline;
+  padding: 20px;
+  text-align: center;
+  font-family: "MonteCarlo", cursive;
+  font-size: 30px;
+  color: black;
+}
+.redes a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 2px 1px 1px #a35f1b;
+}
+
+/*Nav Bar bootstrap*/
+.navbar-propiedades-mio {
+  margin-top: 10px;
+  background-color: rgba(175, 77, 60, 0.55);
+  font-family: "Ysabeau Infant", sans-serif;
+  font-size: 20px; /*20px*/
+  text-shadow: 1px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  /*Background gradient*/
+  background: rgb(14, 14, 13);
+  background: -moz-linear-gradient(0deg, rgb(14, 14, 13) 11%, rgb(215, 206, 197) 52%);
+  background: -webkit-linear-gradient(0deg, rgb(14, 14, 13) 11%, rgb(215, 206, 197) 52%);
+  background: linear-gradient(0deg, rgb(14, 14, 13) 11%, rgb(215, 206, 197) 52%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0e0d",endColorstr="#d7cec5",GradientType=1);
+  /*desde aca media querys*/
+}
+body .grid-container-tienda {
+  padding: 10px;
+  margin: 5%;
+  font-family: "Mandali", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: " caja-principal-1 caja-principal-3" "caja-principal-2  caja-principal-4";
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+body .grid-container-tienda section h3 {
+  text-align: center;
+  font-family: "Ysabeau Infant";
+}
+body .grid-container-tienda section p {
+  padding: 5px;
+  text-align: center justify;
+}
+body .grid-container-tienda section img {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+@media (max-width: 576px) {
+  body .grid-container-tienda {
+    width: auto;
+    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "caja-principal-1" "caja-principal-2" "caja-principal-3" "caja-principal-4";
+  }
+}
+
+/*Grid Areas*/
+.caja-principal-1 {
+  grid-area: caja-principal-1;
+}
+
+.caja-principal-2 {
+  grid-area: caja-principal-2;
+}
+
+.caja-principal-3 {
+  grid-area: caja-principal-3;
+}
+
+.caja-principal-4 {
+  grid-area: caja-principal-4;
+}
+
+/*Titulo de Cada Página: Tienda, Cuidados, Quienes Somos, Contacto*/
+.title-header {
+  color: black;
+  text-align: center;
+  font-family: "Tajawal", sans-serif;
+  font-size: 40px;
+  margin: 50px;
+  font-size: 70px;
+}
+
+.title-header {
+  animation-name: animacion-titulo;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards; /* Para que se mantenga el estado final de la animación */
+  animation-timing-function: ease-out;
+}
+
+@keyframes animacion-titulo {
+  from {
+    transform: translateY(-100%);
+    color: #7c0321;
+  }
+  to {
+    color: rgb(8, 8, 8);
+  }
+}
+.grid-container-cuidados {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "cuidados01  cuidados03" "cuidados02  cuidados03";
+  gap: 20px;
+  justify-content: center;
+}
+.grid-container-cuidados section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+  border: 1px solid black;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.grid-container-cuidados div {
+  align-self: center;
+  width: 100%;
+}
+.grid-container-cuidados img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.grid-container-cuidados h4 {
+  padding: 10px;
+  font-family: "Ysabeau Infant", serif;
+  align-self: center;
+  text-align: center;
+}
+.grid-container-cuidados p {
+  align-self: center;
+  text-align: justify;
+  font-family: "Mandali", sans-serif;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*Grid Areas*/
+.cuidados01 {
+  grid-area: cuidados01;
+}
+
+.cuidados02 {
+  grid-area: cuidados02;
+}
+
+.cuidados03 {
+  grid-area: cuidados03;
+  display: flex;
+  flex-direction: column;
+}
+.cuidados03 img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+.cuidados03 p {
+  gap: 20px;
+  padding: 15px;
+}
+
+span {
+  font-weight: bold;
+  font: 17px;
+}
+
+@media (max-width: 576px) {
+  .grid-container-cuidados {
+    margin: 15px;
+    grid-template-columns: 80vw;
+    grid-template-areas: "cuidados01" "cuidados02" "cuidados03";
+  }
+  div {
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.quienes-somos-main {
+  padding: 10px;
+  margin: 5%;
+}
+@media (max-width: 576px) {
+  .quienes-somos-main body {
+    width: 100%;
+  }
+}
+.quienes-somos-main p {
+  font-size: 20px;
+  color: black;
+  font-family: "Tajawal", sans-serif;
+}
+@media (max-width: 576px) {
+  .quienes-somos-main p {
+    margin-top: 10%;
+  }
+}
+
+.img-carrousel {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.grid-container-footer {
+  display: grid;
+  padding: 20px;
+  margin: 1%;
+  border-top: solid 3px rgba(175, 77, 60, 0.55);
+  color: white;
+  font-family: "Mandali", sans-serif;
+  font-size: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 2fr, 2fr, 0.2;
+  grid-template-areas: "cont-grid maps-grid segu-grid  segu-grid     what-grid " "cba-grid  maps-grid  .  redes-grid  icon-wha-grid" "end-grid end-grid end-grid end-grid end-grid";
+  justify-content: center;
+  align-content: center;
+}
+
+.end-grid {
+  grid-area: end-grid;
+  padding: 20px;
+  border-top: solid 3px rgba(175, 77, 60, 0.55);
+}
+.end-grid h4 {
+  text-align: center;
+  font-family: "MonteCarlo", cursive;
+}
+
+.cont-grid {
+  grid-area: cont-grid;
+}
+
+.cba-grid {
+  grid-area: cba-grid;
+}
+
+.maps-grid {
+  grid-area: maps-grid;
+  align-items: start;
+  padding: 20px;
+}
+
+.segu-grid {
+  grid-area: segu-grid;
+}
+
+.redes-grid {
+  grid-area: redes-grid;
+}
+
+.what-grid {
+  grid-area: what-grid;
+  align-items: end;
+}
+
+.icon-wha-grid {
+  grid-area: icon-wha-grid;
+}
+
+@media (max-width: 576px) {
+  .grid-container-footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "cont-grid" "maps-grid" "segu-grid" "what-grid" "cba-grid" "." "redes-grid" "icon-wha-grid" "end-grid";
+    justify-content: center;
+  }
+}
+/*Boton ENVIAR*/
+/*Fuente*/
+.modifica-font {
+  font-family: "Tajawal", sans-serif;
+  font-weight: bold;
+}
+
+/*Color de fondo*/
+.color-boton {
+  background-color: rgba(175, 77, 60, 0.55);
+  border: #573D33 solid 1.5px;
+  text-shadow: none;
+}
+
+/*Hover*/
+.animacion-boton a:hover {
+  background-color: transparent !important;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

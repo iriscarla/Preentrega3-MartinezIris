@@ -1,0 +1,13 @@
+/*Nav Bar bootstrap*/
+.navbar-propiedades-mio{
+    margin-top: 10px;
+    background-color: map-get($colors, terracota);
+    font-family: 'MonteCarlo', cursive;
+    font-size: nth($size , 2 );/*20px*/
+    text-shadow: 1px rgba(0, 0, 0, 0.5);
+}
+
+
+.title-header{
+    @extend %title-header;
+}

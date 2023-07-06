@@ -1,0 +1,24 @@
+/*Boton ENVIAR*/
+
+/*Fuente*/
+.modifica-font{
+    font-family: 'Tajawal', sans-serif;
+    font-weight:bold ;
+}
+
+/*Color de fondo*/
+.color-boton{
+    background-color: map-get($colors, terracota );
+    border: map-get($colors, rosa-viejo ) solid 1.5px;
+    text-shadow: none;
+    
+}
+
+/*Hover*/
+.animacion-boton a:hover{
+    background-color: transparent !important;
+    font-weight: bold;
+  
+
+ }
+

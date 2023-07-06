@@ -1,0 +1,28 @@
+%propiedades-flex{
+    display: flex;
+    flex-flow: row wrap;
+};
+
+/*Titulo de Cada Página: Tienda, Cuidados, Quienes Somos, Contacto*/
+%title-header{
+    color: rgb(22, 21, 21);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 30px;
+    margin: 30px;
+    font-size: nth($size, 4 ); /*60px*/
+
+};
+    
+
+/*Extend Cajas de tienda*/
+%grid-tienda{
+    border: 3px solid map-get($colors, lila );
+     display: flex;
+     width: 500px;
+     justify-content: space-around;
+     align-items: center
+     
+};
+
