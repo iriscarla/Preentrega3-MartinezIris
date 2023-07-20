@@ -16,13 +16,22 @@
 };
     
 
-/*Extend Cajas de tienda*/
+// /*Extend Cajas de tienda*/
 %grid-tienda{
-    border: 3px solid map-get($colors, lila );
-     display: flex;
-     width: 500px;
-     justify-content: space-around;
-     align-items: center
+    height: 50vh;
+    border: solid 3px black;
+    display: flex;
+    border-radius: 7px;
      
-};
+ };
 
+
+/*Fondo*/
+%background{
+    background: rgb(215,206,197);
+background: -moz-linear-gradient(0deg, rgba(215,206,197,1) 77%, rgba(14,14,13,1) 96%);
+background: -webkit-linear-gradient(0deg, rgba(215,206,197,1) 77%, rgba(14,14,13,1) 96%);
+background: linear-gradient(0deg, rgba(215,206,197,1) 77%, rgba(14,14,13,1) 96%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7cec5",endColorstr="#0e0e0d",GradientType=1);
+background-attachment: fixed;
+}

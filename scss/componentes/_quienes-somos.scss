@@ -1,30 +1,78 @@
+#body-quienes-somos{
+    @extend %background;
 
-.quienes-somos-main{
-    padding: 10px;
-    margin:5%;
-    @media (max-width:576px) {
-        body{
-            width: 100% ;
-        }    
+    .quienes-somos-main{
+        // @include margenes (5%, 10px);
+         padding: 10px;
+         margin:5%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 0.2fr;
+        grid-template-areas:
+            "container-fluid" 
+            "parrafo"
+            "gracias" ;
+           
+            align-items: center;
+         gap: 2em;
+         
+         
+        
+        
+        }
+        
+        @media (max-width:576px) {
+            .quienes-somos-main{
+                
+              p{
+                padding: 1%;
+               
+              }
+               
+                
+            } 
     }
-
-    p{
-        font-size: 20px;
-        color:black;
-        font-family: 'Tajawal', sans-serif;
-    }
-    @media (max-width:576px) {
-        p{
-            margin-top: 10%;
-        }    
-    }
+    
 }
 
+
+
+
+    .container-fluid{
+        grid-area: container-fluid;
+    }
+
+    .parrafo {
+        grid-area: parrafo;
+        font-size: 1.2em;
+        padding: 20px;
+        margin: 4%;
+        color:map-get($colors, black);
+        font-family: 'Tajawal', sans-serif;
+        height: 100%;
+       
+       
+        
+    }
+
+    .gracias{
+       grid-area: gracias;
+       text-align: center;
+       font-family: 'Jost', sans-serif;
+       font-weight: bold;
+       font-size: 25px;
+       color: map-get($colors, terracota );
+       text-shadow: rgb(71, 67, 67) 1px 1px 1px;
+    }
+        
+
+
 .img-carrousel{
-    height: 400px;
     object-fit: cover;
-    border-radius: 10px;
     }
     
-
+.borde{
+    border-radius: 15px;
+}
     
+
+

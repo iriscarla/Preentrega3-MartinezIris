@@ -22,14 +22,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&family=Fleur+De+Leah&family=Lavishly+Yours&family=Mandali&family=MonteCarlo&family=Raleway:wght@200&family=Tajawal:wght@300&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Jost:wght@200&family=Mandali&family=MonteCarlo&family=Tajawal:wght@300&display=swap"
         rel="stylesheet">
-    <!--End Google Fonts-->
-    <title> CONTACTO | CARLA  </title>
+    <!-- AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title> CONTACTO | CARLA </title>
 
     <!-- BODY SECTION-->
 
-<body class="body">
+<body id="body-contacto">
     <!--    HEADER SECTION -->
     <header>
         <!--    NavBar Bootstrap-->
@@ -45,11 +46,12 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-around " id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                                <a class="nav-link" href="./tienda.html">Tienda</a>
-                                <a class="nav-link" href="./cuidados.html">Cuidados</a>
-                                <a class="nav-link" href="./quienes_somos.html">Quienes Somos</a>
-                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                                <a class="nav-link font-barra active" aria-current="page"
+                                    href="../index.html">Inicio</a>
+                                <a class="nav-link font-barra" href="./tienda.html">Tienda</a>
+                                <a class="nav-link font-barra" href="./cuidados.html">Cuidados</a>
+                                <a class="nav-link font-barra" href="./quienes_somos.html">Quienes Somos</a>
+                                <a class="nav-link font-barra" href="./contacto.html">Contacto</a>
                             </div>
                         </div>
                     </div>
@@ -68,27 +70,33 @@
     <!--    END HEADER-->
 
     <!--    MAIN SECTION-->
-    <main class="caja">
+    <main id="contacto-main">
 
         <section class="container">
             <div class="row justify-content-around">
 
                 <div class=" row g-4 col-lg-4">
                     <div class="mb-3 modifica-font">
-                        <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="nombre@mail.com">
+                        <form action="documento.php" method="get">
+                            <label for="exampleFormControl" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
+                                placeholder="nombre@mail.com">
                     </div>
 
                     <div class="mb-3 modifica-font">
-                        <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="exampleFormControlTextarea1" class="form-label"
+                            name="exampleFormControlTextarea1">Consulta</label>
+                        <input type="text" class="form-control" name="exampleFormControlTextarea1" required>
+
                     </div>
 
                     <div class="col-lg-1 animacion-boton  btn-primary justify-content-center ">
-                        <a href="#" class="  btn color-boton modifica-font " role="button"
-                            data-bs-toggle="button ">Enviar</a>
+                        <!-- <a href="#" class="  btn color-boton modifica-font " 
+                            data-bs-toggle="button ">Enviar</a> -->
+                        <input type="submit" value="Enviar"
+                            class="btn color-boton  animacion-boton  btn-primary modifica-font" required>
                     </div>
+                    </form>
                 </div>
 
 
@@ -98,9 +106,23 @@
                     Gracias por visitar nuestro sitio
                     ¡Gracias por visitarnos y esperamos ser parte de tus proyectos de decoración!
                 </p>
+                <div data-aos="fade-up" data-aos-duration="3000">
+                    <div class="mapa-contacto">
+                        <h3>Nos podes encontrar en Córdoba Capital!</h3>
+
+                        <!--Map-->
 
 
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217955.0018463993!2d-64.35915751163122!3d-31.39905470525905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1683909523033!5m2!1ses-419!2sar"
+                            width="250" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"> MAPA</iframe>
 
+                    </div>
+
+                </div>
+
+            </div>
 
             </div>
 
@@ -115,60 +137,44 @@
     <!--END MAIN-->
 
     <!--FOOTER SECTION-->
-    <footer class="footer grid-container-footer">
+    <footer id="footer">
 
-        <div class="cont-grid">
-            <h3 class="titulo-con">CONTACTO</h3>
-        </div>
-
-        <div class="cba-grid">
-            <p>
-                Ciudad de Córdona
-                <br>
-                Córdoba
-            </p>
+        <div>
+            <h5>Ciudad de Córdoba</h5>
+            <p> Córdoba Captital -Argentina</p>
         </div>
 
 
-
-        <div class="maps-grid">
-            <!--Map-->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217955.0018463993!2d-64.35915751163122!3d-31.39905470525905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1683909523033!5m2!1ses-419!2sar"
-                width="250" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"> MAPA</iframe>
-        </div>
-
-        <div class="segu-grid">
-            <h3 class="seguinos">Seguinos en redes sociales</h3>
-        </div>
-
-        <div class="redes-grid">
-            <ul>
-                <a href="https://www.instagram.com/" target="_blank"> <img src="../img/instagram.png"
+        <div>
+            <h5>Redes Sociales</h5>
+            <ul class="redes">
+                <a href="https://www.instagram.com/" target="_blank"><img src="../img/instagram.png"
                         alt="Logo de Instagram"></a>
                 <a href="https://www.facebook.com/" target="_blank"> <img src="../img/Facebook.png"
                         alt="Logo de Facebook"></a>
             </ul>
         </div>
 
-
-        <div class="what-grid">
-            <h3 class="whatsapp">
-                <h3>Whatsapp </h3>
+        <div>
+            <h5>Horarios de atención</h5>
+            <ul>
+                Lunes a viernes: 9 a 18hs
+                Sábados: 9 a 16hs
+            </ul>
         </div>
 
         <div class="icon-wha-grid">
-            <a href="https://web.whatsapp.com/" target="_blank"> <img src="../img/Facebook.png" alt="Logo de whatsapp"></a>
-        </div>
-
-        <div class="end-grid">
-            <h4 class="pie_pagina">Carla</h4>
+            <a href="https://web.whatsapp.com/" target="_blank"> <img src="../img/whatsappppp.png"
+                    alt="Logo de whatsapp"></a>
         </div>
 
 
 
     </footer>
+
+    <section class="end">
+        <p>Carla</p>
+    </section>
     <!--END FOOTER -->
 
 
@@ -176,6 +182,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+
+    <!-- AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

@@ -1,13 +1,30 @@
 /*Nav Bar bootstrap*/
 .navbar-propiedades-mio{
     margin-top: 10px;
-    background-color: map-get($colors, terracota);
-    font-family: 'MonteCarlo', cursive;
-    font-size: nth($size , 2 );/*20px*/
-    text-shadow: 1px rgba(0, 0, 0, 0.5);
+    // background-color: map-get($colors, terracota);
+    background-color: map-get($colors, terracota )
+    //  text-shadow: 1px rgba(255, 255, 255, 0.5);
+   
 }
 
 
 .title-header{
     @extend %title-header;
+}
+
+.font-barra{
+    font-family: 'Jost', sans-serif ;
+    // font-weight: bold;
+    font-size: nth($size , 2 );/*20px*/
+    text-shadow: 0.5px 0px black;
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+    color:white !important;
+
+}
+
+/*General*/
+
+p::selection{
+    background-color: map-get($colors, rosado);
 }

@@ -1,123 +1,53 @@
-.grid-container-footer{
-    display: grid;
+#footer{
+    margin: 5px;
     padding: 20px;
-    margin: 1%;
-    border-top: solid 3px rgba(175, 77, 60, 0.55);
-    color: white;
-    font-family: 'Mandali', sans-serif;
-    font-size: 15px;
-    grid-template-columns: repeat(5, 1fr) ;
-    grid-template-rows: 2fr, 2fr, 0.20;
-    grid-template-areas: 
-    "cont-grid maps-grid segu-grid  segu-grid     what-grid "
-    "cba-grid  maps-grid  .  redes-grid  icon-wha-grid"
-    "end-grid end-grid end-grid end-grid end-grid";
-   justify-content: center;
-    align-content: center;
-
-
-    
-        //  @media (max-width:576px) {
-            
-        //     grid-template-columns:1fr ;
+    border-top: solid map-get($colors, rosa-viejo ) 4px;
+    border-bottom: solid map-get($colors, rosa-viejo ) 4px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    font-size: 1.3em;
+    // background-color: rgba(75, 69, 69, 0.4);
+        li{
+            list-style-type: none;
+            font-size: 1.8em ;
+            color:map-get($colors, negro );
+            padding: 10px;
           
-        //     grid-template-areas:
-        //     "cont-grid "
-        //     "cba-grid  "  
-        //     "maps-grid  "
-        //     "segu-grid  "
-        //     "what-grid  "
-        //     "redes-grid "
-        //     "icon-wha-grid "
-        //     "end-grid "; 
-        // }
-            // img{
-            //     height: 50px;
-            //     width: 50px;
-            // }
-            
-            
-            
-            
-            
-            
-            // display: flex;
-            // flex-flow: column wrap;
-            // justify-content: space-around;
-            // align-content:end;
 
-            // img{
-            //     height: 50px;
-            //     width: 50px !important;
-            // }
         }
-            
-
-
-.end-grid{
-    grid-area: end-grid;
-    padding: 20px;
-    
-    border-top:solid 3px rgba(175, 77, 60, 0.55) ;
-        h4{
-            text-align: center;
+        a{
             font-family: 'MonteCarlo', cursive;
+            font-size: 30px;
+            text-decoration: none;
+            padding: 10px;
+            color: black
+            
         }
+        @media screen and (max-width:576px) {
+            #footer{
+                flex-flow: column ;
+            }
+
+            div:nth-child(3n){
+                display: none;
+            }
+            div:nth-child(3n){
+                align-items: center;
+            }
+            h5{
+                display: none;
+            }
+        }
+}
+
+
+.end{
+    display: flex;
+    justify-content: center;
+    font-family: 'MonteCarlo', cursive;
+    color: map-get($colors, terracota );
+    font-size: 40px;
+    font-weight: bolder;
     
 }
-.cont-grid{
-    grid-area: cont-grid;
-    
-}
-
-.cba-grid{
-    grid-area: cba-grid;
-}
-
-.maps-grid{
-    grid-area: maps-grid;
-    align-items: start;
-    
-    padding: 20px;
-    
-}
-
-.segu-grid{
-    grid-area:segu-grid;
-}
-
-.redes-grid{
-    grid-area: redes-grid; 
-    
-}
-
-.what-grid{
-    grid-area:what-grid;
-    align-items: end;
-
-}
-
-.icon-wha-grid{
-    grid-area: icon-wha-grid;
-
-}
-
-
-
-@media (max-width: 576px) {
-    .grid-container-footer {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      grid-template-areas: 
-        "cont-grid"
-        "maps-grid"
-        "segu-grid"
-        "what-grid"
-        "cba-grid"
-        "."
-        "redes-grid"
-        "icon-wha-grid"
-        "end-grid";
-        justify-content: center;
-    }
-  }

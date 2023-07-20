@@ -1,4 +1,11 @@
+#body-cuidados{
+    @extend %background;
+    
+}
+
+
 .grid-container-cuidados{
+    
     margin:5%;
     display:grid;
     grid-template-columns:repeat(2, 1fr);
@@ -92,26 +99,23 @@ span{
 @media (max-width: 576px) {
     .grid-container-cuidados{
         margin: 15px;
-        grid-template-columns:80vw;
+       
+        grid-template-columns:100%;
         grid-template-areas:
             "cuidados01"
             "cuidados02"
             "cuidados03";
+            gap:2px;
 
 
     }
-        div{
-        width: 100%;
+       
     }
         img {
             max-width: 100%;
             height: auto;
-            // width: 100% !important;
-            // height: 100%;
-            // object-fit: cover;
-            // object-position: center;
+            
 
 
     }
 
-}

@@ -1,95 +1,102 @@
-body{
-     /*Background gradient*/
-     background: rgb(14,14,13);
-     background: -moz-linear-gradient(0deg, rgba(14,14,13,1) 11%, rgba(215,206,197,1) 52%);
-     background: -webkit-linear-gradient(0deg, rgba(14,14,13,1) 11%, rgba(215,206,197,1) 52%);
-     background: linear-gradient(0deg, rgba(14,14,13,1) 11%, rgba(215,206,197,1) 52%);
-     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0e0d",endColorstr="#d7cec5",GradientType=1);
+#body-tienda{
+     @extend %background;
 
-     .grid-container-tienda{ 
-          padding: 10px;
-          margin:5%;
-          // @include margenes (5%, 10px);
+     .grid-container-tienda{
+          width: 100%;
+          margin:50px auto;
+          padding: 5%;
           font-family: 'Mandali', sans-serif;
+
           display: grid;
           grid-template-columns: repeat(2, auto);
-          grid-template-rows: repeat(2, auto);
+          grid-template-rows: auto;
           grid-template-areas:
           " caja-principal-1 caja-principal-3"
-          "caja-principal-2  caja-principal-4";
-          // row-gap: 7%;
-          gap: 15px;
-          justify-content: center;
-          align-items: center;
+          "caja-principal-2 caja-principal-4";
+          gap: 10px;
           justify-items: center;
-
+          align-items: stretch;
+          justify-content: space-evenly;
+          
                section{
-                    h3{
-                         text-align: center;
-                         font-family: 'Ysabeau Infant';
-                    }
-                    p{
-                         padding: 5px;
-                         text-align: center justify;
-                    }
-                    img{
+                    @extend %grid-tienda;
 
-                         width: 200px;
-                         height: 300px;
-                         margin: 10px;
-                         object-fit: cover;
-                         border-radius: 5px;
-                    }
-               }
-          }
-          
-/*desde aca media querys*/
-     @media (max-width: 576px) {
-          .grid-container-tienda{
+                    div{
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
 
-                    width: auto;
-                    align-content:  center;
-                    grid-template-columns:1fr;
-                    grid-template-areas: 
-                    "caja-principal-1"
-                    "caja-principal-2"
-                    "caja-principal-3"
-                    "caja-principal-4";}
-               
+                         
+                              h3{
+                                   text-align: center;
+                                   font-family: 'Ysabeau Infant';
+                              }
+                              p{
+                                   padding: 10px;
+                                   text-align: center ;
+                                        a{
+                                             color: rgb(0, 0, 0)
+                                        }
+
+                              }
+                         }
+
+                         img{
+                              object-fit: cover;
+                              
+                              
+                         }
+                    }
                     
-                    
-                  
+
+               } 
+               @media (min-width: 250px) and (max-width: 1150px){
+    
+                    .grid-container-tienda{
+                         grid-template-columns: 1fr;
+                         grid-template-areas:
+                          "caja-principal-1"
+                          "caja-principal-2"
+                          "caja-principal-3"
+                          "caja-principal-4"
+                         ;
+                         section{
+                              flex-flow: column wrap;
+                              height: auto;
+                              gap: 20px;
+                              
+                              
+                              
+                         }
+                         
+                    }
           }
-          
-  
-     
+
 }
+
+
+
 
 /*Grid Areas*/
 .caja-principal-1{
-    @extend %grid-tienda;     
+
      grid-area: caja-principal-1;
 }
 
 .caja-principal-2{
      grid-area: caja-principal-2;
-     @extend %grid-tienda; 
+
 }
 
 .caja-principal-3{
      grid-area: caja-principal-3;
-     @extend %grid-tienda; 
+
 }
 
 .caja-principal-4{
      grid-area: caja-principal-4;
-     @extend %grid-tienda; 
+
 }
 
- 
-   
-   
-   
-   
-   
-   
+
+

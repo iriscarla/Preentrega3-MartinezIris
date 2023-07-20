@@ -1,18 +1,25 @@
 /*Tipografias:
+font-family: 'Amiri Quran', serif;
 font-family: 'Jost', sans-serif;
 font-family: 'Mandali', sans-serif;
 font-family: 'MonteCarlo', cursive;
-font-family: 'Tajawal', sans-serif;
-font-family: 'Ysabeau Infant', sans-serif; */
+font-family: 'Tajawal', sans-serif; */
+
+html{
+    box-sizing: border-box;
+    
+}
+
+html, body{
+    height: 100%;
+}
 
 *{
     margin: 0;
     padding: 0;
-    ;
+    
 }
-html{
-    box-sizing: border-box
-}
+
 @import './abstract/variables';
 @import './abstract/maps';
 @import './abstract/extend';
